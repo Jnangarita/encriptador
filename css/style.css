@@ -30,10 +30,6 @@ main{
     outline: none;
   }
 
-.img-warning{
-    display: inline-block;
-}
-
 .warning{
     display: inline-block;
     color: #495057;
@@ -53,6 +49,11 @@ main{
     cursor: pointer;
     height: 67px;
     width: 328px;
+    transition: 1s;
+}
+
+.btn-encriptar:hover{
+    opacity: 0.8;
 }
 
 .btn-desencriptar{
@@ -64,6 +65,11 @@ main{
     height: 67px;
     margin-left: 30px;
     width: 328px;
+    transition: 1s;
+}
+
+.btn-desencriptar:hover{
+    background: #C4CBD4;
 }
 
 .show-msn{
@@ -77,6 +83,11 @@ main{
     margin-top: 20px;
     padding-left: 20px;
     position: fixed;
+}
+
+.btn-copy:hover{
+    background: #C4CBD4;
+    transition: 1s;
 }
 
 .show-msn:focus{
@@ -93,4 +104,61 @@ main{
     margin-top: 402px;
     position: absolute;
     width: 336px;
+}
+
+/*
+##################################################
+            Pantalla Tablet
+##################################################
+*/
+@media screen and (max-width: 768px){
+    header{
+        width: 100%;
+    }
+
+    main{
+        display: block;
+        margin: 0 80px;
+    }
+
+    .msn{
+        width: 100%;
+    }
+
+    .btn-encriptar{
+        font-size: 16px;
+    }
+
+    .btn-desencriptar{
+        background: #F3F5FC;
+        font-size: 16px;
+    }
+
+    .show-msn{
+        background: white;
+        border: none;
+        border-radius: 24px;
+        color: #0A3871;
+        position: relative;
+        margin: 50px 208px 0 0;
+        width: 592px;
+        height: 343px;
+        bottom: 0;
+    }
+
+    .rectangle{
+        position: relative;
+    }
+
+    .btn-copy{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        font-size: 16px;
+        width: 570px;
+        height: 67px;
+        margin: 0px 20px 20px;
+    }
 }
