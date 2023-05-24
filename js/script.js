@@ -15,6 +15,10 @@ function btnDesencriptar(){
     showTxt.style.backgroundImage = "none";
 }
 
+function btnCopy(){
+    copy(showTxt.value);
+}
+
 function encriptar(cadena){
     let key = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     cadena = cadena.toLowerCase();
@@ -35,4 +39,13 @@ function desencriptar(cadena){
         }
     }
     return cadena;
+}
+
+function copy(text){
+    const tempInput = document.createElement("input");//crea el elemento de entrada que se utilizara para copiar el texto
+    tempInput.value = text;// asigna el valor del argumento text al atributo value del elemento de entrada
+    document.body.appendChild(tempInput);//agrega el elemento de entrada al cuerpo del documento para poder seleccionar su contenido
+    tempInput.select();// selecciona el contenido del elemento de entrada
+    document.execCommand("copy");// copia el texto seleccionado al portapapeles del sistema operativo
+    document.body.removeChild(tempInput);//elimina el elemento de entrada del cuerpo del documento. Evita que queden elementos innecesarios despues de copiar el texto
 }
